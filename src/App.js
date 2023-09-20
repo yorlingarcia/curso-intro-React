@@ -18,22 +18,34 @@ function App() {
   return (
     <React.Fragment>
       <div className="cuerpo-principal">
-        <div className="seccion-izq"></div>
-        <div className="seccion-der"></div>
+        <div className="seccion">
+          <h1>Create new Task</h1>
+          <form>
+            <label>Task Name</label>
+            <input type="text" placeholder="Cortar cebolla" />
+            <CreateTodoButton />
+          </form>
+        </div>
+        <div className="seccion">
+          <div>
+            <h1>Your Task</h1>
+            <TodoCounter total={16} completed={25} />
+            <form>
+              <TodoSearch />
+            </form>
+          </div>
+          <TodoList>
+            {defalutTodos.map((todo) => (
+              <TodoItem
+                key={todo.text}
+                text={todo.text}
+                completed={todo.completed}
+              />
+            ))}
+          </TodoList>
+        </div>
       </div>
       {/* <div className="App"> */}
-      <TodoCounter total={16} completed={25} />
-      <TodoSearch />
-      <TodoList>
-        {defalutTodos.map((todo) => (
-          <TodoItem
-            key={todo.text}
-            text={todo.text}
-            completed={todo.completed}
-          />
-        ))}
-      </TodoList>
-      <CreateTodoButton />
       {/* </div> */}
     </React.Fragment>
   );

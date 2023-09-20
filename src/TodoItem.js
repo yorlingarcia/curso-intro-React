@@ -1,6 +1,8 @@
+import "./TodoItem.css";
 function TodoItem(props) {
   return (
-    <li>
+    <li className="item">
+      <input type="checkbox" />
       <span>V {props.completed}</span>
       <p>{props.text}</p>
       <span>X</span>
