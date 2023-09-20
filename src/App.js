@@ -6,6 +6,8 @@ import { TodoItem } from "./TodoItem";
 import { CreateTodoButton } from "./CreateTodoButton";
 import React from "react";
 
+import "./App.css";
+
 const defalutTodos = [
   { text: "cortar cebolla", completed: true },
   { text: "Tomar el curso de introduccion a react.js", completed: false },
@@ -15,6 +17,10 @@ const defalutTodos = [
 function App() {
   return (
     <React.Fragment>
+      <div className="cuerpo-principal">
+        <div className="seccion-izq"></div>
+        <div className="seccion-der"></div>
+      </div>
       {/* <div className="App"> */}
       <TodoCounter total={16} completed={25} />
       <TodoSearch />
