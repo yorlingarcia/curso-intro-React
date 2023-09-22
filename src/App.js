@@ -6,6 +6,8 @@ import { TodoItem } from "./TodoItem";
 import { CreateTodoButton } from "./CreateTodoButton";
 import React from "react";
 
+import logo from "./assets/svg/undraw_add_tasks_re_s5yj.svg";
+
 import "./App.css";
 
 const defalutTodos = [
@@ -25,6 +27,7 @@ function App() {
             <input type="text" placeholder="Cortar cebolla" />
             <CreateTodoButton />
           </form>
+          <img className="image" src={logo} alt="Tareas" />
         </div>
         <div className="seccion">
           <div>
