@@ -3,7 +3,13 @@ function TodoItem(props) {
   return (
     <li className="item">
       <label className="prueba">
-        <input type="checkbox" checked={props.completed} className="i-prueba" />
+        <input
+          type="checkbox"
+          readOnly
+          checked={props.completed}
+          className="i-prueba
+       "
+        />
         <span className="s-prueba"></span>
       </label>
       <p className={`p-item ${props.completed && "p-checked"}`}>{props.text}</p>

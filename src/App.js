@@ -22,20 +22,17 @@ function App() {
       <div className="cuerpo-principal">
         <div className="seccion">
           <h1>Create new Task</h1>
-          <form>
-            <label>Task Name</label>
-            <input type="text" placeholder="Cortar cebolla" />
-            <CreateTodoButton />
-          </form>
+          <label>Task Name</label>
+          <input type="text" placeholder="Cortar cebolla" />
+          <CreateTodoButton />
           <img className="image" src={logo} alt="Tareas" />
         </div>
         <div className="seccion">
           <div>
             <h1>Your Task</h1>
             <TodoCounter total={16} completed={25} />
-            <form>
-              <TodoSearch />
-            </form>
+
+            <TodoSearch />
           </div>
           <div className="filtros">
             <button>Todos</button>
