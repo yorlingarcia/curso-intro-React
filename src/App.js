@@ -37,15 +37,22 @@ function App() {
               <TodoSearch />
             </form>
           </div>
-          <TodoList>
-            {defalutTodos.map((todo) => (
-              <TodoItem
-                key={todo.text}
-                text={todo.text}
-                completed={todo.completed}
-              />
-            ))}
-          </TodoList>
+          <div className="filtros">
+            <button>Todos</button>
+            <button>Pendientes</button>
+            <button>Completados</button>
+          </div>
+          <div>
+            <TodoList>
+              {defalutTodos.map((todo) => (
+                <TodoItem
+                  key={todo.text}
+                  text={todo.text}
+                  completed={todo.completed}
+                />
+              ))}
+            </TodoList>
+          </div>
         </div>
       </div>
       {/* <div className="App"> */}
