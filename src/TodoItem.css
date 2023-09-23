@@ -1,10 +1,30 @@
 .item {
   display: flex;
   flex-direction: row;
+  align-items: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 0.5rem auto;
   width: 95%;
   margin: 0.5rem auto;
   border-radius: 1rem;
   border: 2px solid #5611f849;
+  position: relative;
+}
+
+.item:hover .button-item {
+  display: inline;
+}
+
+.p-item {
+  padding-left: 0.5rem;
+}
+
+.button-item {
+  display: none;
+  position: absolute;
+  right: 1%;
+  background-color: rgba(48, 6, 199, 0.623);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
 }
